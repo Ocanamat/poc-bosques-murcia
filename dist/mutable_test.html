@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.11.0">
+<title>Dashboard SIG Fitosanitario Murcia</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air.9914ee1a.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air.9914ee1a.css">
+<link rel="modulepreload" href="./_observablehq/client.d0a3f926.js">
+<link rel="modulepreload" href="./_observablehq/runtime.62b61640.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.10504731.js">
+
+    
+    
+<script type="module">
+
+import {define} from "./_observablehq/client.d0a3f926.js";
+
+define({id: "444b5e86", mode: "inline", inputs: ["selectedMarker","display"], body: async (selectedMarker,display) => {
+display(await(
+selectedMarker.name || 'None selected'
+))
+}});
+
+define({id: "2dea3c4d", mode: "inline", inputs: ["selectedMarker","display"], body: async (selectedMarker,display) => {
+display(await(
+selectedMarker.info || 'Click a marker to see info'
+))
+}});
+
+</script>
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
+<nav>
+</nav>
+</aside>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block">
+  <div class="observablehq--inspect observablehq--error">SyntaxError: Unexpected token (11:7)</div>
+</div>
+<p>// Display selected marker info
+html`</p><div><p></p>
+  <h3>Selected Marker Info</h3>
+  <p>Name: <observablehq-loading></observablehq-loading><!--:444b5e86:--></p>
+  <p>Info: <observablehq-loading></observablehq-loading><!--:2dea3c4d:--></p>
+</div>`
+<p>// You can create more cells to display or use the selectedMarker info
+// For example, a chart based on the selected city's data:
+Plot.plot({
+y: {
+grid: true,
+label: "Value"
+},
+marks: [
+Plot.barY([10, 20, 30], {x: ["Data 1", "Data 2", "Data 3"], fill: "steelblue"}),
+Plot.text([10, 20, 30], {x: ["Data 1", "Data 2", "Data 3"], text: d =&gt; d, dy: -8})
+],
+title: <code>Data for ${selectedMarker.name || 'Selected City'}</code>
+})</p>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="./map"><span>Map Tests</span></a><a rel="next" href="./test"><span>Untitled</span></a></nav>
+<div>Built with Observable.</div>
+</footer>
+</div>

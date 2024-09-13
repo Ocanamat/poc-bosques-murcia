@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.11.0">
+<title>Estado Fitosanitario de Bosques de Murcia | Dashboard SIG Fitosanitario Murcia</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight,alt,wide.f6ca92af.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight,alt,wide.f6ca92af.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.ea9fd553.css">
+<link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="modulepreload" href="./_observablehq/client.d0a3f926.js">
+<link rel="modulepreload" href="./_observablehq/runtime.62b61640.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.10504731.js">
+<link rel="modulepreload" href="./_import/components/map_gpt.f1cda2d0.js">
+<link rel="modulepreload" href="./_npm/leaflet@1.9.4/d8a0af43.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/407f7a1f.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.470d1590.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.16/e828d8c8.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/063eb405.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/c68fbd73.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/7055d4c5.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/a62ae5ce.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e95f898e.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/d44feff9.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/5830b12a.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/84d7b8e9.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/2c0cdfa2.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/626bedc4.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/00c41b5d.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/b5f7cdc6.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/b22c5864.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/6f15f633.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/ef1ec490.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e1ff060.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/5851d7ef.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/dcd02767.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/f1db2593.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/034b7bcb.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/4bb53638.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/bbafde58.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/aa5b35a8.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/32c7fec2.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/567840a0.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/cf9b720b.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/5dcd62f4.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/f8e03c56.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/5bc129e1.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/19c92b44.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/f31b5398.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/8debb4ba.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/4b0cc581.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/1ee6c50d.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/5eed35fd.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/e67acb27.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/8ac9039b.js">
+
+    
+    
+<script type="module">
+
+import {define} from "./_observablehq/client.d0a3f926.js";
+import {registerFile} from "./_observablehq/stdlib.10504731.js";
+
+registerFile("./data/Dendometro.csv", {"name":"./data/Dendometro.csv","mimeType":"text/csv","path":"./_file/data/Dendometro.64b9803f.csv","lastModified":1726238569464,"size":40685});
+registerFile("./data/Desfronde.csv", {"name":"./data/Desfronde.csv","mimeType":"text/csv","path":"./_file/data/Desfronde.625d2595.csv","lastModified":1726237225592,"size":66199});
+registerFile("./data/ESFPs.json", {"name":"./data/ESFPs.json","mimeType":"application/json","path":"./_file/data/ESFPs.49c4d957.json","lastModified":1726221760909,"size":2384});
+registerFile("./data/Temperaturas.csv", {"name":"./data/Temperaturas.csv","mimeType":"text/csv","path":"./_file/data/Temperaturas.b23af69f.csv","lastModified":1726234761072,"size":1071633});
+
+define({id: "1153b158", outputs: ["selectedMarker"], body: async () => {
+const {selectedMarker} = await import("./_import/components/map_gpt.f1cda2d0.js");
+//import {interval} from "npm:@mootari/range-slider"
+//import { FileAttachment } from "npm:@observablehq/file-attachments"
+return {selectedMarker};
+}});
+
+define({id: "98d7d613", inputs: ["FileAttachment"], outputs: ["stations","bls","desfronde","dendrometro"], body: (FileAttachment) => {
+const stations = FileAttachment("./data/ESFPs.json").json();
+const bls = FileAttachment("./data/Temperaturas.csv").csv({typed: true});
+const desfronde = FileAttachment("./data/Desfronde.csv").csv({typed: true});
+const dendrometro = FileAttachment("./data/Dendometro.csv").csv({typed: true});
+return {stations,bls,desfronde,dendrometro};
+}});
+
+define({id: "67f280b8", inputs: ["stations","selectedMarker","desfronde","dendrometro"], outputs: ["filteredData","filteredDesf","filteredDen"], body: (stations,selectedMarker,desfronde,dendrometro) => {
+const filteredData = stations.filter(d => d.ESFP === selectedMarker.name)
+
+const filteredDesf = desfronde.filter(d => d.Esfp === selectedMarker.name)
+
+const filteredDen = dendrometro.filter(d => d.Esfp === selectedMarker.name)
+return {filteredData,filteredDesf,filteredDen};
+}});
+
+define({id: "e9faa150", inputs: ["Inputs","filteredData"], outputs: ["stationsTable"], body: (Inputs,filteredData) => {
+const stationsTable = Inputs.table(filteredData, {
+  columns: ["ID", "TERM_MUNIC", "PARAJE", "ESPECIE", "TIPO_EST", "COMARC_FOR", "NOMBREMONT"], 
+  height: 50, 
+  header: {
+    ID : "ID",
+    TERM_MUNIC: "Término Municipal",
+    PARAJE: "Paraje",
+    ESPECIE: "Especie",
+    TIPO_EST: "Tipo",
+    COMARC_FOR: "Comarca",
+    NOMBREMONT: "Montaña"
+  }} );
+return {stationsTable};
+}});
+
+define({id: "c98ccef3", inputs: ["display"], outputs: ["createMap","addMarkers","initializeMap","div","markers","map"], body: async (display) => {
+const {createMap, addMarkers, initializeMap} = await import("./_import/components/map_gpt.f1cda2d0.js");
+
+const div = display(document.createElement("div"));
+div.style = "height: 700px;";
+
+const markers = [
+  { position: [37.64457238,	-1.278253045], name: "ESFP2", popupContent: "ESFP2 <br> Sierra del Algarrobo"},
+  { position: [37.85916327,	-1.636106988], name: "ESFP5", popupContent: "ESFP5 <br> Collado Mangueta"},
+  { position: [37.90047553,	-1.15475342], name: "ESFP9", popupContent: "ESFP9 <br> Carrascoy-El Valle"},
+  { position: [38.14437045,	-1.899575076], name: "ESFP13", popupContent: "ESFP13 <br> Pinar Negro"},
+  { position: [38.18927534,	-1.353002644], name: "ESFP16", popupContent: "ESFP16 <br> Sierra de Solán"}
+  
+];
+
+const map = initializeMap(div, [38.0644185,-1.4960835], 9, markers);
+
+return {createMap,addMarkers,initializeMap,div,markers,map};
+}});
+
+define({id: "116fd5a9", inputs: ["display","stationsTable"], body: (display,stationsTable) => {
+display(stationsTable);
+}});
+
+define({id: "2f259da7", mode: "inline", inputs: ["filteredData","display"], body: async (filteredData,display) => {
+display(await(
+filteredData[0].LITOLOGIA || 'None selected'
+))
+}});
+
+define({id: "3316f61a", mode: "inline", inputs: ["filteredData","display"], body: async (filteredData,display) => {
+display(await(
+filteredData[0].SUELO || 'None selected'
+))
+}});
+
+define({id: "39c806b1", inputs: ["view","Inputs"], outputs: ["genReport"], body: (view,Inputs) => {
+const genReport = view(Inputs.button("Generar Informe"));
+return {genReport};
+}});
+
+define({id: "da153744", inputs: ["Plot","filteredDesf","display"], body: async (Plot,filteredDesf,display) => {
+display(await(
+Plot.plot({
+x: {axis: null},
+y: {tickFormat: "s", grid: true},
+color: {scheme: "spectral", legend: true},
+marks: [
+  Plot.barY(filteredDesf, {
+    x: "Esfp",
+    y: "MO",
+    fill: "Esfp",
+    fx: "Porcion",
+    sort: {x: null, color: null, fx: {value: "-y", reduce: "sum"}}
+  }),
+  Plot.ruleY([0])
+]
+})
+))
+}});
+
+define({id: "8efcc05f", inputs: ["Plot","desfronde","display"], body: async (Plot,desfronde,display) => {
+display(await(
+Plot.plot({
+x: {axis: null},
+y: {tickFormat: "s", grid: true},
+color: {scheme: "spectral", legend: true},
+marks: [
+  Plot.barY(desfronde, {
+    x: "Esfp",
+    y: "MO",
+    fill: "Esfp",
+    fx: "Porcion",
+    sort: {x: null, color: null, fx: {value: "-y", reduce: "sum"}}
+  }),
+  Plot.ruleY([0])
+]
+})
+))
+}});
+
+define({id: "3cb0209a", inputs: ["Plot","bls","display"], body: async (Plot,bls,display) => {
+display(await(
+Plot.plot({
+  marks: [
+    Plot.ruleY([0]),
+    Plot.lineY(bls, { x: "Fecha", y: "Temperatura", stroke: "Estacion", strokewidth: 5})
+  ],
+  style: "overflow: visible;",
+  x: {
+    type: "time",
+    label: "Fecha"  // Format date for the x-axis
+  },
+  y: {
+    grid: true,
+    label: "Temperatura"
+  },
+  color: {
+    legend: true  // Show legend for the `variable` field
+  }
+})
+))
+}});
+
+define({id: "6ff2295f", inputs: ["Plot","dendrometro","display"], body: async (Plot,dendrometro,display) => {
+display(await(
+  Plot.plot({
+  x: {axis: null},
+  y: {tickFormat: "s", grid: true},
+  color: {scheme: "spectral", legend: true},
+  marks: [
+    Plot.barY(dendrometro, {
+      x: "Esfp",
+      y: "Diam",
+      fill: "Esfp",
+      fx: "",
+      sort: {x: null, color: null, fx: {value: "-y", reduce: "sum"}}
+    }),
+    Plot.ruleY([0])
+  ]
+})
+))
+}});
+
+</script>
+<div id="observablehq-center">
+<main id="observablehq-main" class="observablehq">
+<!-- Load Mutable to sync visualizations  -->
+<div class="observablehq observablehq--block"><!--:1153b158:--></div>
+<!-- Load ESFPs data and Coordinates  -->
+<div class="observablehq observablehq--block"><!--:98d7d613:--></div>
+<div class="observablehq observablehq--block"><!--:67f280b8:--></div>
+<div class="observablehq observablehq--block"><!--:e9faa150:--></div>
+<!-- Markdown  -->
+<h1 id="estado-fitosanitario-de-bosques-de-murcia" tabindex="-1"><a class="observablehq-header-anchor" href="#estado-fitosanitario-de-bosques-de-murcia">Estado Fitosanitario de Bosques de Murcia</a></h1>
+<p><em>Prueba de concepto de dashboard estático.</em></p>
+<p>Resumen de datos SIG de estaciones de monitoreo permanente (ESFP) de los bosques murcianos y datos de capturas, desfronde, dedometría y temperatura relativo a cada ESFP.</p>
+<hr>
+<!-- HTML Grid and Functions  -->
+<div class="grid grid-cols-4">
+  <div class="card grid-colspan-2 grid-rowspan-2" style="display: flex; flex-direction: column; gap: 1rem;">
+    <h1> Mapa de Estaciones </h1>
+    <h2> Datos identificativos por estacion </h2>
+<!-- Load map functions and display map with markers  -->
+<div class="observablehq observablehq--block"><!--:c98ccef3:--></div>
+  </div>
+  <div class="card grid-colspan-2 grid-rowspan-1">
+    <h1>Datos de la Estación</h1>
+<div class="observablehq observablehq--block"><!--:116fd5a9:--></div>
+  <div class="card">
+  <p> <strong>Litología : </strong> <observablehq-loading></observablehq-loading><!--:2f259da7:--> </p> 
+  <p> <strong>Suelo : </strong> <observablehq-loading></observablehq-loading><!--:3316f61a:--> </p>
+  </div>
+  <div class="grid grid-cols-3">
+  <div> </div>
+<div class="observablehq observablehq--block"><!--:39c806b1:--></div>
+  </div>
+  </div>
+  <div class="card grid-colspan-2">
+    <h1>Desfronde Acumulado</h1>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:da153744:--></div>
+  </div>
+  <div class="card grid-colspan-1">
+    <h2>Desfronde Total</h2>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:8efcc05f:--></div>
+  </div>
+  <div class="card grid-colspan-2">
+    <h2>Evolución Temperatura</h2>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:3cb0209a:--></div>
+  </div>
+  <div class="card grid-colspan-1">
+    <h2>Crecimiento Acumulado Dendometría</h2>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:6ff2295f:--></div>
+  </div>
+</div>
+<div class="card" style="padding: 0;">
+</div>
+<hr>
+</main>
+<footer id="observablehq-footer">
+<nav><a rel="prev" href="./"><span>Dashboard SIG Fitosanitario Murcia</span></a><a rel="next" href="./example-dashboard"><span>Example dashboard</span></a></nav>
+<div>Built with Observable.</div>
+</footer>
+</div>
